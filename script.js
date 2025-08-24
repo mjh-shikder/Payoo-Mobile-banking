@@ -13,7 +13,7 @@ document.getElementById('btn-login')
         
         if (mobileNumberValueConverted === mobileNumber
             && pinNumberValueConverted === pinNumber) {
-            console.log('all values matched');
+            window.location.href="./home.html"
             
             }
         else {
