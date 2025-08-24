@@ -12,6 +12,9 @@
     />
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- css file -->
+     <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body class="bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center">
     <section class="flex flex-col justify-center items-center">
@@ -22,7 +25,8 @@
         <div>
           <label class="font-semibold" for="">Mobile Number</label>
           <br />
-          <input
+          <input 
+            id="mobile-number"
             type="text"
             placeholder="Your Number"
             class="input bg-[#f4f5f7] mt-3 rounded-3xl"
@@ -32,17 +36,22 @@
           <label class="font-semibold" for="">5 Digits Pin</label>
           <br />
           <input
+            id="pin-number"
             type="text"
             placeholder="5 Digits Pin"
             class="input bg-[#f4f5f7] mt-3 rounded-3xl"
           />
         </div>
-        <button
+        <button id="btn-login" type="button"
           class="btn bg-[#0874f2] text-white font-semibold mt-5 w-full rounded-3xl"
         >
           Login
         </button>
       </form>
     </section>
+
+
+    <!-- js scripts -->
+     <script src="./script.js"></script>
   </body>
 </html>
