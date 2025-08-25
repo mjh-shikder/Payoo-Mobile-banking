@@ -1,5 +1,5 @@
 const validPin = 12345
-
+// Add money feature
 document.getElementById('btn-add-money')
     .addEventListener('click', function (e) {
         e.preventDefault()
@@ -31,6 +31,22 @@ document.getElementById('btn-add-money')
     })
 
 
+// cashout money feature
+document.getElementById('btn-withdraw').addEventListener('click', function(e) {
+    e.preventDefault
+    const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value);
+    const availableBlance = parseInt(document.getElementById('available-blance')
+        .innerText)
+
+    const totalNewAvailableBlance = availableBlance - withdrawAmount;
+    
+    document.getElementById('available-blance').innerText = totalNewAvailableBlance;
+    
+    
+})
+
+
+
 // Toggling features
 document.getElementById('w-add-money')
     .addEventListener('click', function () {
@@ -46,11 +62,10 @@ document.getElementById('w-add-money')
             document.getElementById('add-money-parent').style.display = 'none';
 
             document.getElementById('cashout-parent').style.display = 'block';
-                
-            
-            
-            
-    
             
         })
+
+
+
+
 
