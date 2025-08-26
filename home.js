@@ -23,6 +23,20 @@ function handleToggle(id) {
 
 }
 
+// function for selected button style
+function selectedBtnStyle(id) {
+
+    const formBtns = document.getElementsByClassName('Form-btn')
+
+    for (const btn of formBtns) {
+        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+        btn.classList.add('border-gray-300')
+    }
+    document.getElementById(id).classList.remove('border-gray-300')
+    document.getElementById(id).classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+
+}
+
 // Add money feature
 document.getElementById('btn-add-money')
     .addEventListener('click', function (e) {
@@ -79,14 +93,7 @@ document.getElementById('w-add-money')
 
         handleToggle('add-money-parent');
         // selected button style
-        const formBtns = document.getElementsByClassName('Form-btn')
-
-        for (const btn of formBtns) {
-            btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-            btn.classList.add('border-gray-300')
-        }
-        document.getElementById('w-add-money').classList.remove('border-gray-300')
-        document.getElementById('w-add-money').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+        selectedBtnStyle('w-add-money');
     })
 
 // w chasout
@@ -95,14 +102,7 @@ document.getElementById('w-cashout')
 
         handleToggle('cashout-parent');
         // selected button style
-        const formBtns = document.getElementsByClassName('Form-btn')
-
-        for (const btn of formBtns) {
-            btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-            btn.classList.add('border-gray-300')
-        }
-        document.getElementById('w-cashout').classList.remove('border-gray-300')
-        document.getElementById('w-cashout').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+        selectedBtnStyle('w-cashout');
     })
 // w send money
 document.getElementById('w-send-money').addEventListener('click', function () {
@@ -110,14 +110,7 @@ document.getElementById('w-send-money').addEventListener('click', function () {
     handleToggle('send-money-parent');
 
     // selected button style
-    const formBtns = document.getElementsByClassName('Form-btn')
-
-    for (const btn of formBtns) {
-        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-        btn.classList.add('border-gray-300')
-    }
-    document.getElementById('w-send-money').classList.remove('border-gray-300')
-    document.getElementById('w-send-money').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+    selectedBtnStyle('w-send-money');
 
 
 })
@@ -128,14 +121,7 @@ document.getElementById('w-get-bonus').addEventListener('click', function () {
     handleToggle('get-bonus-parent');
 
     // selected button style
-    const formBtns = document.getElementsByClassName('Form-btn')
-
-    for (const btn of formBtns) {
-        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-        btn.classList.add('border-gray-300')
-    }
-    document.getElementById('w-get-bonus').classList.remove('border-gray-300')
-    document.getElementById('w-get-bonus').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+    selectedBtnStyle('w-get-bonus');
 })
 
 // w pay bill
@@ -144,14 +130,7 @@ document.getElementById('w-pay-bill').addEventListener('click', function () {
     handleToggle('pay-bill-parent');
 
     // selected button style
-    const formBtns = document.getElementsByClassName('Form-btn')
-
-    for (const btn of formBtns) {
-        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-        btn.classList.add('border-gray-300')
-    }
-    document.getElementById('w-pay-bill').classList.remove('border-gray-300')
-    document.getElementById('w-pay-bill').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+    selectedBtnStyle('w-pay-bill');
 })
 
 // w transaction
@@ -160,13 +139,6 @@ document.getElementById('w-transaction').addEventListener('click', function () {
     handleToggle('transaction-parent');
 
     // selected button style
-    const formBtns = document.getElementsByClassName('Form-btn')
-
-    for (const btn of formBtns) {
-        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
-        btn.classList.add('border-gray-300')
-    }
-    document.getElementById('w-transaction').classList.remove('border-gray-300')
-    document.getElementById('w-transaction').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+    selectedBtnStyle('w-transaction');
 })
 
