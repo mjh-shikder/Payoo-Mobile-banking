@@ -1,4 +1,12 @@
 const validPin = 12345
+
+// fucntion to get input values (reusable function)
+function getInputValueNumber(id) {
+    const inputValue = parseInt(document.getElementById(id).value);
+    return inputValue;
+}
+
+
 // Add money feature
 document.getElementById('btn-add-money')
     .addEventListener('click', function (e) {
@@ -6,8 +14,8 @@ document.getElementById('btn-add-money')
         
         const bank = document.getElementById('bank').value;
         const accountNumber = document.getElementById('account-number').value;
-        const addAmount = parseInt(document.getElementById('add-amount').value);
-        const pin = parseInt(document.getElementById('add-pin').value) ;
+        const addAmount = getInputValueNumber('add-amount');
+        const pin = getInputValueNumber('add-pin');
 
         const availableBlance = parseInt(document.getElementById('available-blance')
         .innerText)
@@ -34,7 +42,7 @@ document.getElementById('btn-add-money')
 // cashout money feature
 document.getElementById('btn-withdraw').addEventListener('click', function(e) {
     e.preventDefault
-    const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value);
+    const withdrawAmount = getInputValueNumber('withdraw-amount');
     const availableBlance = parseInt(document.getElementById('available-blance')
         .innerText)
 
