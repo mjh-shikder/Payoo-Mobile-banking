@@ -72,12 +72,21 @@ document.getElementById('btn-withdraw').addEventListener('click', function (e) {
 
 
 // Toggling features
+
 // w add money
 document.getElementById('w-add-money')
     .addEventListener('click', function () {
 
         handleToggle('add-money-parent');
+        // selected button style
+        const formBtns = document.getElementsByClassName('Form-btn')
 
+        for (const btn of formBtns) {
+            btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+            btn.classList.add('border-gray-300')
+        }
+        document.getElementById('w-add-money').classList.remove('border-gray-300')
+        document.getElementById('w-add-money').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
     })
 
 // w chasout
@@ -85,28 +94,79 @@ document.getElementById('w-cashout')
     .addEventListener('click', function () {
 
         handleToggle('cashout-parent');
+        // selected button style
+        const formBtns = document.getElementsByClassName('Form-btn')
+
+        for (const btn of formBtns) {
+            btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+            btn.classList.add('border-gray-300')
+        }
+        document.getElementById('w-cashout').classList.remove('border-gray-300')
+        document.getElementById('w-cashout').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
     })
 // w send money
 document.getElementById('w-send-money').addEventListener('click', function () {
 
     handleToggle('send-money-parent');
+
+    // selected button style
+    const formBtns = document.getElementsByClassName('Form-btn')
+
+    for (const btn of formBtns) {
+        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+        btn.classList.add('border-gray-300')
+    }
+    document.getElementById('w-send-money').classList.remove('border-gray-300')
+    document.getElementById('w-send-money').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+
+
 })
 
 //w get bonus
 document.getElementById('w-get-bonus').addEventListener('click', function () {
 
     handleToggle('get-bonus-parent');
+
+    // selected button style
+    const formBtns = document.getElementsByClassName('Form-btn')
+
+    for (const btn of formBtns) {
+        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+        btn.classList.add('border-gray-300')
+    }
+    document.getElementById('w-get-bonus').classList.remove('border-gray-300')
+    document.getElementById('w-get-bonus').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
 })
 
 // w pay bill
 document.getElementById('w-pay-bill').addEventListener('click', function () {
 
     handleToggle('pay-bill-parent');
+
+    // selected button style
+    const formBtns = document.getElementsByClassName('Form-btn')
+
+    for (const btn of formBtns) {
+        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+        btn.classList.add('border-gray-300')
+    }
+    document.getElementById('w-pay-bill').classList.remove('border-gray-300')
+    document.getElementById('w-pay-bill').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
 })
 
 // w transaction
 document.getElementById('w-transaction').addEventListener('click', function () {
 
     handleToggle('transaction-parent');
+
+    // selected button style
+    const formBtns = document.getElementsByClassName('Form-btn')
+
+    for (const btn of formBtns) {
+        btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
+        btn.classList.add('border-gray-300')
+    }
+    document.getElementById('transaction-parent').classList.remove('border-gray-300')
+    document.getElementById('transaction-parent').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
 })
 
