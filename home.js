@@ -46,6 +46,12 @@ document.getElementById('btn-add-money')
         const bank = getInputValue('bank');
         const accountNumber = document.getElementById('account-number').value;
         const addAmount = getInputValueNumber('add-amount');
+
+        if (addAmount <= 49) {
+            alert("Invalid Amount")
+            return;
+        }
+
         const pin = getInputValueNumber('add-pin');
 
         const availableBlance = parseInt(document.getElementById('available-blance')
@@ -85,6 +91,11 @@ document.getElementById('btn-withdraw').addEventListener('click', function (e) {
     const availableBlance = parseInt(document.getElementById('available-blance')
         .innerText)
 
+    if (withdrawAmount <= 20 || withdrawAmount > availableBlance) {
+        alert("Invalid withdraw Amount")
+        return;
+        }
+    
     const totalNewAvailableBlance = availableBlance - withdrawAmount;
 
     document.getElementById('available-blance').innerText = totalNewAvailableBlance;
