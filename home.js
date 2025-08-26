@@ -6,13 +6,17 @@ function getInputValueNumber(id) {
     return inputValue;
 }
 
+function getInputValue(id) {
+    const inputValue = document.getElementById(id).value;
+    return inputValue;
+}
 
 // Add money feature
 document.getElementById('btn-add-money')
     .addEventListener('click', function (e) {
         e.preventDefault()
         
-        const bank = document.getElementById('bank').value;
+        const bank = getInputValue('bank');
         const accountNumber = document.getElementById('account-number').value;
         const addAmount = getInputValueNumber('add-amount');
         const pin = getInputValueNumber('add-pin');
@@ -59,6 +63,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(e) {
 document.getElementById('w-add-money')
     .addEventListener('click', function () {
         document.getElementById('cashout-parent').style.display = 'none';
+        document.getElementById('send-money-parent').style.display = 'none';
 
         document.getElementById('add-money-parent').style.display = 'block';
         
@@ -68,11 +73,17 @@ document.getElementById('w-add-money')
     document.getElementById('w-cashout')
         .addEventListener('click', function () {
             document.getElementById('add-money-parent').style.display = 'none';
+            document.getElementById('send-money-parent').style.display = 'none';
 
             document.getElementById('cashout-parent').style.display = 'block';
             
         })
 
+document.getElementById('w-send-money').addEventListener('click', function () {
+    document.getElementById('add-money-parent').style.display = 'none';
+    document.getElementById('cashout-parent').style.display = 'none';
+    document.getElementById('send-money-parent').style.display = 'block';
+})
 
 
 
