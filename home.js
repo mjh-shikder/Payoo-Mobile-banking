@@ -11,6 +11,18 @@ function getInputValue(id) {
     return inputValue;
 }
 
+// function to toggle 
+function handleToggle(id) {
+    const forms = document.getElementsByClassName('form');
+
+    for (const form of forms) {
+        form.style.display = 'none';
+    }
+
+    document.getElementById(id).style.display = 'block';
+
+}
+
 // Add money feature
 document.getElementById('btn-add-money')
     .addEventListener('click', function (e) {
@@ -63,64 +75,38 @@ document.getElementById('btn-withdraw').addEventListener('click', function (e) {
 // w add money
 document.getElementById('w-add-money')
     .addEventListener('click', function () {
-        const forms = document.getElementsByClassName('form');
-        for (const form of forms) {
-            form.style.display = 'none';
-        }
-        document.getElementById('add-money-parent').style.display = 'block';
+
+        handleToggle('add-money-parent');
 
     })
 
 // w chasout
 document.getElementById('w-cashout')
     .addEventListener('click', function () {
-        const forms = document.getElementsByClassName('form');
-        for (const form of forms) {
-            form.style.display = 'none';
-        }
 
-        document.getElementById('cashout-parent').style.display = 'block';
-
+        handleToggle('cashout-parent');
     })
 // w send money
 document.getElementById('w-send-money').addEventListener('click', function () {
 
-
-    const forms = document.getElementsByClassName('form');
-    for (const form of forms) {
-        form.style.display = 'none';
-    }
-    document.getElementById('send-money-parent').style.display = 'block';
-
+    handleToggle('send-money-parent');
 })
 
 //w get bonus
 document.getElementById('w-get-bonus').addEventListener('click', function () {
-    
-      const forms = document.getElementsByClassName('form');
-    for (const form of forms) {
-        form.style.display = 'none';
-    }
-    document.getElementById('get-bonus-parent').style.display = 'block';
+
+    handleToggle('get-bonus-parent');
 })
 
 // w pay bill
 document.getElementById('w-pay-bill').addEventListener('click', function () {
-    
-      const forms = document.getElementsByClassName('form');
-    for (const form of forms) {
-        form.style.display = 'none';
-    }
-    document.getElementById('pay-bill-parent').style.display = 'block';
+
+    handleToggle('pay-bill-parent');
 })
 
 // w transaction
 document.getElementById('w-transaction').addEventListener('click', function () {
-    
-      const forms = document.getElementsByClassName('form');
-    for (const form of forms) {
-        form.style.display = 'none';
-    }
-    document.getElementById('transaction-parent').style.display = 'block';
+
+    handleToggle('transaction-parent');
 })
 
