@@ -166,7 +166,7 @@ document.getElementById('w-transaction').addEventListener('click', function () {
         btn.classList.remove('border-[#0874f2]', 'bg-[#f2f8fe]')
         btn.classList.add('border-gray-300')
     }
-    document.getElementById('transaction-parent').classList.remove('border-gray-300')
-    document.getElementById('transaction-parent').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
+    document.getElementById('w-transaction').classList.remove('border-gray-300')
+    document.getElementById('w-transaction').classList.add('border-[#0874f2]', 'bg-[#f2f8fe]')
 })
 
