@@ -76,39 +76,39 @@
         <!-- cash out ⬇️  -->
         <div
           id="w-cashout"
-          class=" Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
+          class="Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
         >
           <img class="mx-auto" src="./assets/send1.png" alt="Add money icon" />
           <h2 class="text-[14px] text-gray-700">Cashout</h2>
         </div>
         <!-- Send money ⬇️  -->
         <div
-        id="w-send-money"
-          class="Form-btn  border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
+          id="w-send-money"
+          class="Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
         >
           <img class="mx-auto" src="./assets/money1.png" alt="Add money icon" />
           <h2 class="text-[14px] text-gray-700">Send Money</h2>
         </div>
         <!-- Get bonus ⬇️  -->
         <div
-        id="w-get-bonus"
-          class=" Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
+          id="w-get-bonus"
+          class="Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
         >
           <img class="mx-auto" src="./assets/bonus1.png" alt="Add money icon" />
           <h2 class="text-[14px] text-gray-700">Get Bonus</h2>
         </div>
         <!-- pay bill ⬇️  -->
         <div
-        id="w-pay-bill"
-          class=" Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
+          id="w-pay-bill"
+          class="Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
         >
           <img class="mx-auto" src="./assets/purse1.png" alt="Add money icon" />
           <h2 class="text-[14px] text-gray-700">Pay Bill</h2>
         </div>
         <!-- Transactions ⬇️ -->
         <div
-        id="w-transaction"
-          class=" Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
+          id="w-transaction"
+          class="Form-btn border-1 border-gray-300 text-center p-3 rounded-xl h-[80px] flex flex-col items-center justify-center"
         >
           <img
             class="mx-auto"
@@ -120,7 +120,7 @@
       </div>
     </section>
     <!-- Add money Form Section -->
-    <section id="add-money-parent" class="max-w-lg mx-auto form ">
+    <section id="add-money-parent" class="max-w-lg mx-auto form">
       <div class="px-3 mt-7">
         <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Add Money From Bank</h1>
         <form class="bg-white rounded-xl p-8">
@@ -190,7 +190,11 @@
     </section>
 
     <!-- Cash out section -->
-    <section id="cashout-parent" class="max-w-lg mx-auto form" style="display: none">
+    <section
+      id="cashout-parent"
+      class="max-w-lg mx-auto form"
+      style="display: none"
+    >
       <div class="px-3 mt-7">
         <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Cashout</h1>
         <form class="bg-white rounded-xl p-8">
@@ -235,35 +239,48 @@
     </section>
 
     <!-- Send Money -->
-    <section style="display: none"
-    id="send-money-parent"
-    class="form">
+    <section
+      style="display: none"
+      id="send-money-parent"
+      class="form max-w-lg mx-auto"
+    >
       <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Send Money</h1>
     </section>
 
-
     <!-- Get Bonus -->
-     <section style="display: none"
-    id="get-bonus-parent"
-    class="form">
+    <section style="display: none" id="get-bonus-parent" class="form">
       <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Get Bonus</h1>
     </section>
 
     <!-- Pay bill -->
- <section style="display: none"
-    id="pay-bill-parent"
-    class="form">
+    <section style="display: none" id="pay-bill-parent" class="form">
       <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Pay Bill</h1>
     </section>
 
-
     <!-- Transection -->
-     <section style="display: none"
-    id="transaction-parent"
-    class="form">
-      <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Transections</h1>
+    <section
+      style="display: none"
+      id="transaction-parent"
+      class="form max-w-lg mx-auto  rounded-md"
+    >
+      <div class="flex justify-between items-center px-3 mt-7">
+        <h1 class="text-gray-800 font-bold mb-2.5">Transections History</h1>
+        <p class="text-gray-500">View All</p>
+      </div>
+      <div id="transaction-container">
+        <!-- <div class="flex items-center justify-between bg-white px-3 py-4 rounded-md mx-3">
+        <div class="flex gap-4 ">
+          <div class="p-3  rounded-full bg-[#f4f5f7]"><img src="./assets/transaction1.png" alt="transaction Icon"></div>
+          <div>
+            <h2>Electricity Bill</h2>
+            <p>Today : 01: 44 AM</p>
+          </div>
+        </div>
+        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+      </div> -->
+      </div>
+      
     </section>
-
 
     <!-- Js linked -->
     <script src="./home.js"></script>

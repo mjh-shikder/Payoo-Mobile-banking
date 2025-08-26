@@ -1,4 +1,5 @@
 const validPin = 12345
+const transactionData = []
 
 // fucntion to get input values (reusable function)
 function getInputValueNumber(id) {
@@ -65,7 +66,15 @@ document.getElementById('btn-add-money')
         // Now set the new amout to the page
 
         document.getElementById('available-blance').innerText = totalBlance
-
+        // fro add money transaction 
+        
+        const data = {
+            name: "Add Money",
+            date: new Date().toLocaleTimeString()
+        }
+        transactionData.push(data);
+        
+        
     })
 
 
@@ -80,9 +89,43 @@ document.getElementById('btn-withdraw').addEventListener('click', function (e) {
 
     document.getElementById('available-blance').innerText = totalNewAvailableBlance;
 
-
+    // cashout transaction data
+    const data = {
+            name: "Cash Out",
+            date: new Date().toLocaleTimeString()
+        }
+        transactionData.push(data);
 })
 
+
+// Transaction Histroy Feature
+document.getElementById('w-transaction').addEventListener('click', function () {
+    const trasnactionContainer = document.getElementById('transaction-container');
+    trasnactionContainer.innerText = ''
+
+    for (const data of transactionData) {
+        const div = document.createElement('div')
+        div.innerHTML = `  <div class="flex items-center justify-between bg-white px-3 py-4 rounded-md mx-3 mt-3">
+        <div class="flex gap-4 ">
+          <div class="p-3  rounded-full bg-[#f4f5f7]"><img src="./assets/transaction1.png" alt="transaction Icon"></div>
+          <div>
+            <h2>${data.name}</h2>
+            <p>${data.date}</p>
+          </div>
+        </div>
+        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+      </div>
+      `
+        
+        trasnactionContainer.appendChild(div)
+        
+        
+    }
+
+
+   
+    
+})
 
 
 // Toggling features
