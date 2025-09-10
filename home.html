@@ -314,8 +314,71 @@
     </section>
 
     <!-- Pay bill -->
-    <section style="display: none" id="pay-bill-parent" class="form">
+    <section style="display: none" id="pay-bill-parent" class="form max-w-lg mx-auto">
       <h1 class="text-gray-800 font-bold ml-2 mb-2.5">Pay Bill</h1>
+      <form class="bg-white rounded-xl p-8">
+          <div>
+            <label class="font-semibold" for="">Select a Bank</label>
+            <br />
+
+            <select
+              id="bank"
+              class="select bg-[#f4f5f7] mt-3 mb-3 rounded-md text-gray-400 w-full"
+            >
+              <option disabled selected>Select to Pay</option>
+              <option>Shonali Bank</option>
+              <option>Pubali Bank</option>
+              <option>Islami Bank</option>
+              <option>City Bank</option>
+              <option>Dutch Bangla Bank</option>
+              <option>Rupali Bank</option>
+              <option>Brack Bank</option>
+              <option>AB Bank</option>
+              <option>Bank Asia</option>
+              <option>UCB Bank</option>
+              <option>Dhaka Bank</option>
+              <option>IFIC Bank</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-semibold" for="">Biller Account Number</label>
+            <br />
+            <input
+              id="account-number"
+              type="text"
+              placeholder="Enter 11 Digit Account Number"
+              class="input bg-[#f4f5f7] mt-3 mb-3 rounded-md w-full"
+            />
+          </div>
+          <div>
+            <label class="font-semibold" for="">Amount to Pay</label>
+            <br />
+            <input
+              id="add-amount"
+              type="text"
+              placeholder="Minimum Amount $50"
+              class="input bg-[#f4f5f7] mt-3 mb-3 rounded-md w-full"
+            />
+          </div>
+          <div>
+            <label class="font-semibold" for="">Pin Number</label>
+            <br />
+            <input
+              id="add-pin"
+              type="text"
+              placeholder="Enter 5 Digit Pin"
+              class="input bg-[#f4f5f7] mt-3 mb-3 rounded-md w-full"
+            />
+          </div>
+          <!-- Add Money Button -->
+          <button
+            id="btn-add-money"
+            type="button"
+            class="btn bg-[#0874f2] text-white font-semibold mt-5 w-full rounded-3xl"
+          >
+            Add Money
+          </button>
+        </form>
     </section>
 
     <!-- Transection -->
